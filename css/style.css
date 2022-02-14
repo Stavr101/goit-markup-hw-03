@@ -56,13 +56,17 @@ address {
 
 .container {
   width: 1200px;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid tomato;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* header start */
 
 .header-container {
@@ -155,6 +159,7 @@ address {
 /* hero start */
 
 .hero {
+  height: 600px;
   text-align: center;
   background-color: #2f303a;
   padding-top: 200px;
@@ -163,11 +168,11 @@ address {
 
 .hero-title {
   max-width: 696px;
+  height: 120px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 
-  outline: 1px solid tomato;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -177,28 +182,21 @@ address {
   color: var(--secondary-accent-color);
 }
 
-/* Hero section */
-
 .hero-button {
   min-width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 16px;
-  padding-left: 16px;
-
+  padding-left: 30px;
+  padding-right: 30px;
   border-radius: 4px;
-  border-color: transparent;
 
-  color: var(--secondary-text-color);
-  background-color: var(--accent-color);
   cursor: pointer;
-
-  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  text-align: center;
   letter-spacing: 0.06em;
+  background: #2196f3;
+  color: var(--secondary-accent-color);
 }
 
 .hero-button:hover,
@@ -206,60 +204,11 @@ address {
   background-color: #188ce8;
 }
 
-/* .hero-contant {
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
-  background: #2f303a;
-  outline: 1px solid tomato;
-} */
-
-.hero-button {
-  cursor: pointer;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  background: #2196f3;
-  color: var(--secondary-accent-color);
-}
-.hero-button:hover,
-.hero-button:focus {
-  background: #188ce8;
-}
-/* аня */
-
-/* Hero section */
-
-.hero-button {
-  min-width: 200px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 16px;
-  padding-left: 16px;
-
-  border-radius: 4px;
-  border-color: transparent;
-
-  color: var(--secondary-text-color);
-  background-color: var(--accent-color);
-  cursor: pointer;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
-
-/* аня */
-
 /* hero end */
 
 /* quality start*/
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -270,8 +219,20 @@ address {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
+
+.feature-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.quality-card {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+}
+
 .quality-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -290,11 +251,22 @@ address {
 
 /* service start*/
 .service-title {
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
+}
+.service-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.service-card {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
 }
 /* service end */
 /* team start */
@@ -302,6 +274,8 @@ address {
   background: #f5f4fa;
 }
 .team-secondary-title {
+  text-align: center;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -309,7 +283,21 @@ address {
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
 }
+
+.team-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.team-card {
+  flex-wrap: wrap;
+  text-align: center;
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+}
+
 .team-title {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -317,6 +305,11 @@ address {
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
 }
+
+.team-content {
+  padding-top: 10px;
+}
+
 .team-text {
   font-weight: 400;
   font-size: 16px;
@@ -370,13 +363,19 @@ address {
 /* Portfolio */
 
 /* filters start */
-.buttons .current {
+.buttons-list .current {
   color: var(--secondary-accent-color);
   background: var(--accent-color);
 }
 /* .buttons {
   
 } */
+.buttons-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 34px;
+}
+
 .button {
   font-weight: 500;
   font-size: 16px;
@@ -394,13 +393,32 @@ address {
 /* filters end */
 
 /* work start */
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.work-list-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 90px) / 3);
+}
 
 .work-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   color: var(--primary-title-color);
 }
+
+.work-content {
+  /* padding: 20px 24px;
+  outline: 1px solid tomato; */
+}
+
 .work-text {
   font-weight: 400;
   font-size: 16px;
