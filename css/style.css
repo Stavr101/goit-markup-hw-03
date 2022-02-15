@@ -372,11 +372,27 @@ address {
 } */
 .buttons-list {
   display: flex;
+
   justify-content: center;
   padding-bottom: 34px;
 }
 
-.button {
+.button-item:not(:last-child) {
+  margin-right: 8px;
+}
+.button-item {
+  box-sizing: border-box;
+  height: 38px;
+  background: #f5f4fa;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.63;
+}
+
+.buttons {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -415,8 +431,10 @@ address {
 }
 
 .work-content {
-  /* padding: 20px 24px;
-  outline: 1px solid tomato; */
+  padding: 20px 24px;
+  /* outline: 1px solid tomato; */
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .work-text {
