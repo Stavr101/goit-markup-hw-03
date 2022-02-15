@@ -60,7 +60,6 @@ address {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid tomato;
 }
 
 .section {
@@ -75,9 +74,9 @@ address {
   height: 80px;
   padding-top: 24px;
   padding-bottom: 24px;
-  /* vertical-align: bottom; */
-  outline: 1px solid tomato;
+  border-bottom: 1px solid #ececec;
 }
+
 .nav {
   display: flex;
 }
@@ -331,6 +330,11 @@ address {
   letter-spacing: 0.03em;
   color: var(--secondary-accent-color);
 }
+.contact-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .logo-footer {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -360,6 +364,14 @@ address {
   color: var(--secondary-accent-color);
 }
 
+.nav-footer {
+  padding-top: 20px;
+}
+
+.nav-footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 /* Portfolio */
 
 /* filters start */
@@ -380,19 +392,11 @@ address {
 .button-item:not(:last-child) {
   margin-right: 8px;
 }
-.button-item {
-  box-sizing: border-box;
-  height: 38px;
-  background: #f5f4fa;
+
+.button {
+  padding: 6px 22px;
   border-radius: 4px;
-
-  font-weight: 500;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.63;
-}
-
-.buttons {
+  border-color: transparent;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
