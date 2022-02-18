@@ -362,10 +362,10 @@ address {
 .nav-footer .link:focus {
   color: var(--secondary-accent-color);
 }
-
+/* 
 .nav-footer {
   padding-top: 20px;
-}
+} */
 
 .nav-footer-item:not(:last-child) {
   margin-bottom: 9px;
